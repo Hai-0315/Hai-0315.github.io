@@ -4,12 +4,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>抽卡1</title>
+<link rel="icon" href="favicon.ico?v=1.0" />
     <style>
         .div1 {
             display: flex;
             flex-direction: column;
             width: 1500px;
-            height: 450;
+            height: 250px;
             font-size: 26px;
             line-height: 0%;
             font-weight: bold;
@@ -24,17 +25,11 @@
             width: 1500px;
             height: 50px;
         }
-        /* 新增在这里 */
-        /* 新增在这里 */
-        /* 新增在这里 */
-        .div32, .div3 {
+        .div3 {
             display: flex;
             width: 1500px;
             height: 200px;
         }
-        
-        
-        
         .div4 {
             width: 100px;
             background-color: hwb(60 0% 0%);
@@ -167,11 +162,6 @@
                 <p>累计抽数</p>
             </div>
         </div>
-        
-        
-        
-        
-        
         <div class="div3">
             <div class="div9">
                 <div class="div91"></div>
@@ -256,108 +246,11 @@
                 <div class="div133" contenteditable="true"></div>
                 <div class="div134" contenteditable="true"></div>
             </div>
-            
         </div>
-        
-        
-        
-        
-         <div class="div32">
-            <div class="div9">
-                <div class="div91"></div>
-                <div class="div92" contenteditable="true"></div>
-                <div class="div93" contenteditable="true"></div>
-                <div class="div94"></div>
-            </div>
-            <div class="div10">
-                <input type="file" accept="image/*" class="file-input">
-                <img src="" alt="Selected Image" class="preview-image">
-            </div>
-            <div class="div11">
-                <div class="div14">
-                    <input type="file" accept="image/*" class="file-input">
-                    <img src="" alt="Selected Image" class="preview-image">
-                </div>
-                <div class="div15">
-                    <input type="file" accept="image/*" class="file-input">
-                    <img src="" alt="Selected Image" class="preview-image">
-                </div>
-                <div class="div16">
-                    <input type="file" accept="image/*" class="file-input">
-                    <img src="" alt="Selected Image" class="preview-image">
-                </div>
-                <div class="div17">
-                    <input type="file" accept="image/*" class="file-input">
-                    <img src="" alt="Selected Image" class="preview-image">
-                </div>
-                <div class="div18">
-                    <input type="file" accept="image/*" class="file-input">
-                    <img src="" alt="Selected Image" class="preview-image">
-                </div>
-                <div class="div19">
-                    <input type="file" accept="image/*" class="file-input">
-                    <img src="" alt="Selected Image" class="preview-image">
-                </div>
-                <div class="div20">
-                    <input type="file" accept="image/*" class="file-input">
-                    <img src="" alt="Selected Image" class="preview-image">
-                </div>
-                <div class="div21">
-                    <input type="file" accept="image/*" class="file-input">
-                    <img src="" alt="Selected Image" class="preview-image">
-                </div>
-            </div>
-            <div class="div12">
-                <div class="div22">
-                    <input type="file" accept="image/*" class="file-input">
-                    <img src="" alt="Selected Image" class="preview-image">
-                </div>
-                <div class="div23">
-                    <input type="file" accept="image/*" class="file-input">
-                    <img src="" alt="Selected Image" class="preview-image">
-                </div>
-                <div class="div24">
-                    <input type="file" accept="image/*" class="file-input">
-                    <img src="" alt="Selected Image" class="preview-image">
-                </div>
-                <div class="div25">
-                    <input type="file" accept="image/*" class="file-input">
-                    <img src="" alt="Selected Image" class="preview-image">
-                </div>
-                <div class="div26">
-                    <input type="file" accept="image/*" class="file-input">
-                    <img src="" alt="Selected Image" class="preview-image">
-                </div>
-                <div class="div27">
-                    <input type="file" accept="image/*" class="file-input">
-                    <img src="" alt="Selected Image" class="preview-image">
-                </div>
-                <div class="div28">
-                    <input type="file" accept="image/*" class="file-input">
-                    <img src="" alt="Selected Image" class="preview-image">
-                </div>
-                <div class="div29">
-                    <input type="file" accept="image/*" class="file-input">
-                    <img src="" alt="Selected Image" class="preview-image">
-                </div>
-            </div>
-            <div class="div13">
-                <div class="div131"></div>
-                <div class="div133" contenteditable="true"></div>
-                <div class="div134" contenteditable="true"></div>
-            </div>
-        </div>
-        
-        
-        
-        
-        
     </div>
     <button id="screenshot-button">截图并保存</button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script>
-        
-    
         document.addEventListener("DOMContentLoaded", function () {
             const fileInputs = document.querySelectorAll(".file-input");
 
@@ -388,7 +281,7 @@
         document.getElementById("screenshot-button").addEventListener("click", function () {
             html2canvas(document.querySelector(".div1"), {
                 useCORS: true,
-                scale: 4,
+                scale: 5,
                 logging: false,
                 allowTaint: false
             }).then(canvas => {
@@ -403,7 +296,6 @@
         });
     </script>
 </body>
-
 <body>
     <h1>别的抽卡</h1>
     <button onclick="goToPage1()">抽卡2</button>
