@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div Layout with Screenshot Button</title>
+    <style>
+        .div1 {
+            display: flex;
+            flex-direction: column;
+            width: 1500px;
+            height: 1050;
+            font-size: 26px;
+            line-height: 0%;
+            font-weight: bold;
+            text-align: center;
+            background-image: url("背景.jpg");
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+        .div2 {
+            display: flex;
+            width: 1500px;
+            height: 50px;
+        }
+        /* 新增在这里 */
+        /* 新增在这里 */
+        /* 新增在这里 */
+        .div32, .div33, .div34, .div35, .div3 {
+            display: flex;
+            width: 1500px;
+            height: 200px;
+        }
+        
+        
+        
+        
+        
+        .div4 {
+            width: 100px;
+            background-color: hwb(60 0% 0%);
+            height: 50px;
+            float: left;
+        }
+        .div5 {
+            width: 400px;
+            height: 50px;
+            background-color: hwb(35 33% 8%);
+            float: left;
+        }
+        .div6 {
+            width: 400px;
+            height: 50px;
+            background-color: hwb(185 51% 0% / 0.887);
+            float: left;
+        }
+        .div7 {
+            width: 400px;
+            height: 50px;
+            background-color: hwb(239 53% 2%);
+            float: left;
+        }
+        .div8 {
+            width: 200px;
+            height: 50px;
+            background-color: hwb(154 42% 0%);
+            float: left;
+        }
+        .div9 {
+            width: 100px;
+            height: 200px;
+            font-weight: 100px;
+            line-height: 200%;
+        }
+        .div91 {
+            width: 100px;
+            height: 50px;
+        }
+        .div92 {
+            width: 100px;
+            height: 50px;
+        }
+        .div93 {
+            width: 100px;
+            height: 50px;
+        }
+        .div94 {
+            width: 100px;
+            height: 50px;
+        }
+        .div10 {
+            width: 400px;
+            height: 200px;
+            cursor: pointer;
+        }
+        .div11 {
+            display: flex;
+            flex-wrap: wrap;
+            width: 400px;
+            height: 200px;
+        }
+        .div12 {
+            display: flex;
+            flex-wrap: wrap;
+            width: 400px;
+        }
+        .div13 {
+            width: 200px;
+            height: 200px;
+            line-height: 200%;
+        }
+        .div131 {
+            width: 200px;
+            height: 100px;
+        }
+        .div133 {
+            width: 200px;
+            height: 50px;
+        }
+        .div134 {
+            width: 200px;
+            height: 50px;
+        }
+        .div14, .div15, .div16, .div17, .div18, .div19, .div20, .div21, .div22, .div23, .div24, .div25, .div26, .div27, .div28, .div29 {
+            width: 100px;
+            height: 100px;
+            margin: 0px auto;
+            border: 0px dashed #ccc;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            padding: 0;
+        }
+        .file-input {
+            display: none;
+        }
+        .preview-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+        #screenshot-button {
+            display: block;
+            margin: 50px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="div2">
+            <div class="div4">
+                <p>抽数</p>
+            </div>
+            <div class="div5">
+                <p>相应的卡池</p>
+            </div>
+            <div class="div6">
+                <p>首次获得的角色</p>
+            </div>
+            <div class="div7">
+                <p>重复获得的角色</p>
+            </div>
+            <div class="div8">
+                <p>累计抽数</p>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <div class="div3">
+            <div class="div9">
+                <div class="div91"></div>
+                <div class="div92" contenteditable="true"></div>
+                <div class="div93" contenteditable="true"></div>
+                <div class="div94"></div>
+            </div>
+            <div class="div10">
+                <input type="file" accept="image/*" class="file-input">
+                <img src="" alt="Selected Image" class="preview-image">
+            </div>
+            <div class="div11">
+                <div class="div14">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div15">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div16">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div17">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div18">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div19">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div20">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div21">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+            </div>
+            <div class="div12">
+                <div class="div22">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div23">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div24">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div25">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div26">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div27">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div28">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div29">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+            </div>
+            <div class="div13">
+                <div class="div131"></div>
+                <div class="div133" contenteditable="true"></div>
+                <div class="div134" contenteditable="true"></div>
+            </div>
+            
+        </div>
+        
+        
+        
+        
+        <div class="div32">
+            <div class="div9">
+                <div class="div91"></div>
+                <div class="div92" contenteditable="true"></div>
+                <div class="div93" contenteditable="true"></div>
+                <div class="div94"></div>
+            </div>
+            <div class="div10">
+                <input type="file" accept="image/*" class="file-input">
+                <img src="" alt="Selected Image" class="preview-image">
+            </div>
+            <div class="div11">
+                <div class="div14">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div15">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div16">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div17">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div18">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div19">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div20">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div21">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+            </div>
+            <div class="div12">
+                <div class="div22">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div23">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div24">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div25">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div26">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div27">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div28">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div29">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+            </div>
+            <div class="div13">
+                <div class="div131"></div>
+                <div class="div133" contenteditable="true"></div>
+                <div class="div134" contenteditable="true"></div>
+            </div>
+            
+         </div>
+        
+        
+        <div class="div33">
+            <div class="div9">
+                <div class="div91"></div>
+                <div class="div92" contenteditable="true"></div>
+                <div class="div93" contenteditable="true"></div>
+                <div class="div94"></div>
+            </div>
+            <div class="div10">
+                <input type="file" accept="image/*" class="file-input">
+                <img src="" alt="Selected Image" class="preview-image">
+            </div>
+            <div class="div11">
+                <div class="div14">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div15">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div16">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div17">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div18">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div19">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div20">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div21">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+            </div>
+            <div class="div12">
+                <div class="div22">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div23">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div24">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div25">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div26">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div27">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div28">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div29">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+            </div>
+            <div class="div13">
+                <div class="div131"></div>
+                <div class="div133" contenteditable="true"></div>
+                <div class="div134" contenteditable="true"></div>
+            </div>
+            
+         </div>
+        
+        
+        <div class="div34">
+            <div class="div9">
+                <div class="div91"></div>
+                <div class="div92" contenteditable="true"></div>
+                <div class="div93" contenteditable="true"></div>
+                <div class="div94"></div>
+            </div>
+            <div class="div10">
+                <input type="file" accept="image/*" class="file-input">
+                <img src="" alt="Selected Image" class="preview-image">
+            </div>
+            <div class="div11">
+                <div class="div14">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div15">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div16">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div17">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div18">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div19">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div20">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div21">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+            </div>
+            <div class="div12">
+                <div class="div22">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div23">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div24">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div25">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div26">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div27">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div28">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div29">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+            </div>
+            <div class="div13">
+                <div class="div131"></div>
+                <div class="div133" contenteditable="true"></div>
+                <div class="div134" contenteditable="true"></div>
+            </div>
+            
+        </div>
+       
+       <div class="div35">
+            <div class="div9">
+                <div class="div91"></div>
+                <div class="div92" contenteditable="true"></div>
+                <div class="div93" contenteditable="true"></div>
+                <div class="div94"></div>
+            </div>
+            <div class="div10">
+                <input type="file" accept="image/*" class="file-input">
+                <img src="" alt="Selected Image" class="preview-image">
+            </div>
+            <div class="div11">
+                <div class="div14">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div15">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div16">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div17">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div18">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div19">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div20">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div21">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+            </div>
+            <div class="div12">
+                <div class="div22">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div23">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div24">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div25">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div26">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div27">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div28">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+                <div class="div29">
+                    <input type="file" accept="image/*" class="file-input">
+                    <img src="" alt="Selected Image" class="preview-image">
+                </div>
+            </div>
+            <div class="div13">
+                <div class="div131"></div>
+                <div class="div133" contenteditable="true"></div>
+                <div class="div134" contenteditable="true"></div>
+            </div>
+            
+         </div>
+       
+        
+        
+        
+        
+        
+     </div>
+     
+    <button id="screenshot-button">截图并保存</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const fileInputs = document.querySelectorAll(".file-input");
+
+            fileInputs.forEach(input => {
+                const parentDiv = input.closest("div");
+                const previewImage = parentDiv.querySelector(".preview-image");
+
+                parentDiv.addEventListener("click", () => {
+                    input.click();
+                });
+
+                input.addEventListener("change", function () {
+                    if (this.files && this.files[0]) {
+                        const reader = new FileReader();
+                        reader.onload = function (e) {
+                            previewImage.src = e.target.result;
+                            previewImage.style.display = "block";
+                        };
+                        reader.readAsDataURL(this.files[0]);
+                    } else {
+                        previewImage.src = "";
+                        previewImage.style.display = "none";
+                    }
+                });
+            });
+        });
+
+        document.getElementById("screenshot-button").addEventListener("click", function () {
+            html2canvas(document.querySelector(".div1"), {
+                useCORS: true,
+                scale: 3,
+                logging: false,
+                allowTaint: false
+            }).then(canvas => {
+                const link = document.createElement("a");
+                link.href = canvas.toDataURL("image/png");
+                link.download = "screenshot.png";
+                link.click();
+                link.remove();
+            }).catch(error => {
+                console.error("截图失败:", error);
+            });
+        });
+    </script>
+</body>
+</html>
